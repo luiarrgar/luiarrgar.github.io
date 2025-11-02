@@ -1,0 +1,40 @@
+/*básico*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+img.profile {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
