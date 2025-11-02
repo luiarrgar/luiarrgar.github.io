@@ -1,42 +1,38 @@
-/*básico*/
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #add8e6;
-  color: #333;
-  text-align: center;
+    font-family: Asimovian, sans-serif;
+    background-color: #BCDCEB;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  background-color: #007acc;
-  color: white;
-  padding: 1.5rem 0;
+
+h1 {
+    color: #02D1F1;
+    margin-top: 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
+
+img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
 }
 
-main {
-  padding: 2rem;
+
+ul {
+    list-style-type: square;
+    padding-left: 0;
 }
 
-img.profile {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  display: block;
-  margin: 20px auto;
+
+li {
+    margin: 5px 0;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
 
 
