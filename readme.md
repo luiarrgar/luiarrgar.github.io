@@ -1,10 +1,10 @@
+## Lo aprendido
+- Como crear un CV básico con html  
+- Como usar headings, párrafos, y enlaces  
+- Como subir una página a Github
 
-## What I Learned
-- How to create a basic HTML file  
-- How to use headings, paragraphs, and links  
-- How to host a website on GitHub Pages
+## Lo siguiente
+- En la siguiente práctica añadir CSS  
+- Crear más páginas  
+- Añadir imágenes y enlaces
 
-## Next Steps
-- Add some CSS for styling  
-- Create more pages (e.g. about.html, contact.html)  
-- Add images and links
