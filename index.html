@@ -1,32 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luis Arranz - Página principal</title>
+  <title>Currículum - UD 05.1</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-  <header>
-    <h1>Bienvenido a la página de Luis Arranz</h1>
-    <nav>
-      <a href="CV_Arranz_Luis_v1.html">CV - Versión 1</a> |
-      <a href="CV_Arranz_Luis_v2.html">CV - Versión 2</a> |
-      <a href="tests.html">Tests CSS</a> |
-      <a href="sobremi.html">Sobre mí</a> |
-      <a href="relax.html">Relax</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Bienvenidos</h2>
-    <p>Este es mi página personal con mis proyectos.</p>
+  <!-- MENÚ FIJO -->
+  <div class="menu">
+    <a href="#">Perfil</a>
+    <a href="#">Formación</a>
+    <a href="#">Conocimientos</a>
+  </div>
 
-    <img src="images/imagen_perfil.jpg" alt="foto de perfil" class="profile">
-  </main>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
 
-  <footer>
-    <p>Luis Arranz</p>
-  </footer>
+    <!-- PERFIL -->
+    <div class="caja perfil">
+      <h2>Perfil personal</h2>
+      <p>
+        Estudiante de primer curso de Desarrollo de Aplicaciones,
+        con interés en la programación y el diseño web.
+      </p>
+    </div>
+
+    <!-- CAJA IZQUIERDA (FLOAT) -->
+    <div id="cajaIzq" class="caja izquierda">
+      <h2>Datos personales</h2>
+      <p>Nombre: Luis García</p>
+      <p>Email: luis@email.com</p>
+
+      <a href="#"
+        onclick="document.getElementById('cajaIzq').style.visibility='hidden'">
+        Ocultar (visibility)
+      </a>
+    </div>
+
+    <!-- CAJA DERECHA (FLOAT) -->
+    <div id="cajaDer" class="caja derecha">
+      <h2>Formación</h2>
+      <p>CFGS DAM (en curso)</p>
+      <p>ESO finalizada</p>
+
+      <a href="#"
+        onclick="document.getElementById('cajaDer').style.display='none'">
+        Ocultar (display)
+      </a>
+    </div>
+
+    <!-- CLEAR -->
+    <div class="clear"></div>
+
+    <!-- OVERFLOW -->
+    <div class="caja overflow">
+      <h2>Conocimientos</h2>
+      <p>
+        HTML, CSS, Java, Git, Bases de datos, Sistemas operativos,
+        redes básicas, ofimática, entornos de desarrollo,
+        programación estructurada, algoritmia básica,
+        buenas prácticas de código.
+      </p>
+    </div>
+
+  </div>
+
 </body>
 </html>
 
