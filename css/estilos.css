@@ -1,83 +1,116 @@
-/* Punto 1: Barra de menú siempre fija arriba */
+/* RESET */
+* {
+  margin: 0px auto;
+}
+
+/* GENERAL */
+body {
+  background: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: 'Indie Flower', cursive;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  border: dashed 5px #FF9900;
+  margin: 10px;
+}
+
+ul {
+  color: white;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+/* =========================
+   1. MENÚ FIJO
+   ========================= */
 #menu {
-  position: fixed;     /* 1 */
-  top: 0px;            /* 2 */
-  width: 100%;         /* 3 */
-  z-index: 1000;
-  text-align: center;  
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+  text-align: center;
   background-color: #097054;
   border: 1px solid #FF9900;
   font-family: 'Pacifico', cursive;
   font-size: 1.2em;
 }
 
-body {
-  /* 1. La ruta: el "../" es vital si el CSS está en una subcarpeta */
-  background-image: url('images/fondo.jpg');
-  
-  /* 2. Para que cubra toda la pantalla sin repetirse */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  
-  /* 3. IMPORTANTE: Para que se vea como en el PDF, el fondo 
-     debe quedarse quieto mientras el contenido se desliza */
-  background-attachment: fixed; 
-  
-  font-family: 'Indie Flower', cursive;
-  margin: 0;
+#menu li {
+  display: inline;
+  padding-left: 5px;
 }
 
-/* Punto 1: Hover de los enlaces */
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
 #menu li a:hover {
-  background-color: orange;      /* 1 */
-  text-decoration: underline;    /* 2 */
+  background-color: orange;
+  text-decoration: underline;
   text-decoration-color: blue;
 }
 
-/* Punto 6: Barra de pie de página siempre fija abajo */
-#footer {
-  position: fixed;     /* 1 */
-  bottom: 0px;         /* 2 */
-  width: 100%;         /* 3 */
-  background: url('images/fondo.jpg');
+/* =========================
+   HEADER
+   ========================= */
+#header {
+  margin-top: 50px;
   text-align: center;
+  background-color: #FF9900;
+  border-bottom: 5px solid #6599FF;
+  border-top: 5px solid #6599FF;
   color: white;
-  border-top: 5px solid black;
-  clear: both;
-
+  padding-top: 10px;
 }
 
-/* Punto 2: Capas de imágenes laterales */
+/* =========================
+   2. FLOAT + VISIBILITY
+   ========================= */
 #imageLeft {
-  float: left;         /* 1 */
+  float: left;
   text-align: center;
   padding-bottom: 5px;
 }
 
 #imageRight {
-  float: right;        /* 1 */
+  float: right;
   text-align: center;
   padding-bottom: 5px;
 }
 
-/* Punto 3: Romper la dinámica del float */
+/* =========================
+   3. DISPLAY NONE + CLEAR
+   ========================= */
 #textMain {
-  clear: both;         /* 1 */
+  clear: both;
 }
 
 #imageToHide {
-  float: left;         /* 1 */
+  float: left;
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* Punto 4: Capa de Cookies (Absolute) */
+/* =========================
+   4. CAPA PARECIDA AL MENÚ
+   NO FIJA + SCROLL
+   ========================= */
 #cookieEU {
-  position: absolute;  /* 1 */
-  top: 150px;          /* 2: distancia al top */
-  left: 25%;           /* 3: distancia lateral */
-  width: 50%;          /* 4: ancho */
+  position: absolute;
+  top: 150px;
+  left: 25%;
+  width: 50%;
+
   border: 2px solid red;
   background-color: white;
   margin-bottom: 5px;
@@ -85,10 +118,10 @@ body {
   box-shadow: 2px 2px 50px black;
 }
 
-/* Punto 5: Scroll vertical */
 #textOverflow {
-  overflow-y: scroll;  /* 1 */
-  overflow-x: hidden;  /* 2 */
+  overflow-y: scroll;
+  overflow-x: hidden;
+
   height: 250px;
   text-align: justify;
   border: 5px solid black;
@@ -97,23 +130,63 @@ body {
   margin-right: 20px;
 }
 
-/* Punto 7: Media Query (Pantallas estrechas) */
+/* =========================
+   6. FOOTER FIJO (IGUAL QUE 1)
+   ========================= */
+#footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
+  background-color: #097054;
+  text-align: center;
+  color: white;
+  border-top: 5px solid black;
+  clear: both;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #443266;
+  background-color: white;
+}
+
+/* =========================
+   7. MEDIA QUERY
+   ========================= */
 @media all and (max-width: 500px) {
-  #imageLeft, #imageRight {
-    float: none;       /* 1: Las capas dejan de flotar */
-    width: 100%;
+
+  /* 7.1 Las capas dejan de flotar */
+  #imageLeft,
+  #imageRight {
+    float: none;
+    text-align: center;
   }
-  
+
+  /* 7.2 La capa 3 se desplaza hacia arriba */
   #imageToHide {
-    float: none;       /* 1: Se desplaza hacia arriba */
-    margin-bottom: 10px;
+    float: none;
+  }
+
+  #textCentral {
+    margin: 0px;
+  }
+
+  #textOverflow {
+    margin-right: 0px;
+  }
+
+  #header {
+    margin-top: 80px;
   }
 }
 
-
-
-
-
-
-
-
+@media all and (max-width: 300px) {
+  #header {
+    margin-top: 100px;
+  }
+}
