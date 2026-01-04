@@ -30,7 +30,7 @@
   border-top: 5px solid black;
   clear: both;
 
-  background: url('../images/fondo.jpg');
+  background: url('images/fondo.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -100,6 +100,7 @@
     margin-bottom: 10px;
   }
 }
+
 
 
 
