@@ -13,7 +13,7 @@
 
 body {
   /* 1. La ruta: el "../" es vital si el CSS está en una subcarpeta */
-  background-image: url('../images/fondo.jpg');
+  background-image: url('images/fondo.jpg');
   
   /* 2. Para que cubra toda la pantalla sin repetirse */
   background-repeat: no-repeat;
@@ -109,6 +109,7 @@ body {
     margin-bottom: 10px;
   }
 }
+
 
 
 
