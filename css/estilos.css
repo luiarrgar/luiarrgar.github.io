@@ -11,6 +11,22 @@
   font-size: 1.2em;
 }
 
+body {
+  /* 1. La ruta: el "../" es vital si el CSS está en una subcarpeta */
+  background-image: url('../images/fondo.jpg');
+  
+  /* 2. Para que cubra toda la pantalla sin repetirse */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  /* 3. IMPORTANTE: Para que se vea como en el PDF, el fondo 
+     debe quedarse quieto mientras el contenido se desliza */
+  background-attachment: fixed; 
+  
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+}
 
 /* Punto 1: Hover de los enlaces */
 #menu li a:hover {
@@ -93,6 +109,7 @@
     margin-bottom: 10px;
   }
 }
+
 
 
 
