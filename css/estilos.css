@@ -15,7 +15,7 @@
 
 body {
   /* Ruta de la imagen de fondo */
-  background-image: url('nombre_de_tu_imagen.jpg'); 
+  background-image: url('fondo.jpg'); 
   
   /* Ajustes para que cubra toda la pantalla y no se repita de forma extraña */
   background-size: cover;          /* La imagen cubre todo el fondo */
@@ -149,4 +149,5 @@ body {
     margin-bottom: 40px;
   }
 }
+
 
