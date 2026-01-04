@@ -1,8 +1,9 @@
+/* Punto 1: Barra de menú siempre fija arriba */
 #menu {
-  position: fixed;     /* 1: Fija la posición [cite: 163] */
-  top: 0px;            /* 2: A 0px del top [cite: 163] */
-  width: 100%;         /* 3: Ocupa todo el ancho */
-  z-index: 1000;       /* Asegura que esté por encima de otros elementos */
+  position: fixed;     /* 1 */
+  top: 0px;            /* 2 */
+  width: 100%;         /* 3 */
+  z-index: 1000;
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
@@ -10,40 +11,55 @@
   font-size: 1.2em;
 }
 
+/* Punto 1: Hover de los enlaces */
 #menu li a:hover {
-  background-color: orange;      /* 1: Fondo naranja  */
-  text-decoration: underline;    /* 2: Subrayado  */
-  text-decoration-color: blue;   /* Color de subrayado azul  */
+  background-color: orange;      /* 1 */
+  text-decoration: underline;    /* 2 */
+  text-decoration-color: blue;
 }
 
+/* Punto 6: Barra de pie de página siempre fija abajo */
+#footer {
+  position: fixed;     /* 1 */
+  bottom: 0px;         /* 2 */
+  width: 100%;         /* 3 */
+  background-color: #097054;
+  text-align: center;
+  color: white;
+  border-top: 5px solid black;
+  clear: both;
+}
+
+/* Punto 2: Capas de imágenes laterales */
 #imageLeft {
-  float: left;  /* 1: Capa a la izquierda  */
+  float: left;         /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
 #imageRight {
-  float: right; /* 1: Capa a la derecha  */
+  float: right;        /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
+/* Punto 3: Romper la dinámica del float */
 #textMain {
-  clear: both;  /* 1: Rompe la dinámica del float  */
+  clear: both;         /* 1 */
 }
 
 #imageToHide {
-  float: left;  /* 1: Capa a la izquierda  */
+  float: left;         /* 1 */
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Punto 4: Capa de Cookies (Absolute) */
 #cookieEU {
-  position: absolute; /* 1: Se desplaza con el scroll  */
-  top: 150px;         /* 2: Distancia superior */
-  left: 25%;          /* 3: Centrado aproximado */
-  width: 50%;         /* 4: Ancho de la capa */
-  z-index: 500;
+  position: absolute;  /* 1 */
+  top: 150px;          /* 2: distancia al top */
+  left: 25%;           /* 3: distancia lateral */
+  width: 50%;          /* 4: ancho */
   border: 2px solid red;
   background-color: white;
   margin-bottom: 5px;
@@ -51,9 +67,10 @@
   box-shadow: 2px 2px 50px black;
 }
 
+/* Punto 5: Scroll vertical */
 #textOverflow {
-  overflow-y: scroll; /* 1: Barra vertical [cite: 181] */
-  overflow-x: hidden; /* 2: Oculta horizontal [cite: 181] */
+  overflow-y: scroll;  /* 1 */
+  overflow-x: hidden;  /* 2 */
   height: 250px;
   text-align: justify;
   border: 5px solid black;
@@ -62,28 +79,17 @@
   margin-right: 20px;
 }
 
-#footer {
-  position: fixed;  /* 1: Fija la posición  */
-  bottom: 0px;      /* 2: Anclado al fondo */
-  width: 100%;      /* 3: Todo el ancho */
-  background-color: #097054;
-  text-align: center;
-  color: white;
-  border-top: 5px solid black;
-  clear: both;
-}
-
+/* Punto 7: Media Query (Pantallas estrechas) */
 @media all and (max-width: 500px) {
-  #imageLeft {
-    float: none; /* 1: Deja de flotar  */
-  }
-
-  #imageRight {
-    float: none; /* 1: Deja de flotar  */
+  #imageLeft, #imageRight {
+    float: none;       /* 1: Las capas dejan de flotar */
+    width: 100%;
   }
   
   #imageToHide {
-    float: none; /* 1: Deja de flotar para desplazarse arriba  */
+    float: none;       /* 1: Se desplaza hacia arriba */
+    margin-bottom: 10px;
   }
 }
+
 
