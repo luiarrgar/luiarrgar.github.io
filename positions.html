@@ -2,71 +2,70 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Currículum - UD 05.1</title>
-  <link rel="stylesheet" href="css/estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica UD 5.1</title>
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">   
+  <link rel="stylesheet" type="text/css" href="css/estilos.css" />
 </head>
+<body>  
 
-<body>
-
-  <!-- MENÚ FIJO -->
-  <div class="menu">
-    <a href="#">Perfil</a>
-    <a href="#">Formación</a>
-    <a href="#">Conocimientos</a>
+  <div id="menu">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Donde estamos</a></li>
+      <li><a href="#">Nuestros trabajos</a></li>
+      <li><a href="#">Contáctanos</a></li>
+    </ul>
   </div>
 
-  <!-- CONTENEDOR PRINCIPAL -->
-  <div class="container">
+  <div id="header">
+    <h1>Práctica semana 3</h1>
+  </div>
 
-    <!-- PERFIL -->
-    <div class="caja perfil">
-      <h2>Perfil personal</h2>
-      <p>
-        Estudiante de primer curso de Desarrollo de Aplicaciones,
-        con interés en la programación y el diseño web.
-      </p>
+  <div id='cookieEU'>
+    <h2>Esta webs necesita usar cookies.</h2>
+    <div id='textCookie'>
+      <p>Utilizamos cookies para asegurar que le ofrecemos la mejor experiencia en nuestro sitio web. Si continúa sin cambiar la configuración, asumiremos que está encantado de recibir todas las cookies en este sitio web.</p>
+      <a class='button' href='#' onclick="document.getElementById('cookieEU').style.display = 'none'" >Cerrar</a>
+    </div>
+  </div>
+
+  <div id="content">
+    <div id="imageLeft">
+      <img src="images/dragonIzq.jpeg" alt="dragón Izquierda" />
+      <div>
+        <a class='button' href='#' onclick="document.getElementById('imageLeft').style.visibility = 'hidden'" >Ocultar / visibility</a>
+      </div>
     </div>
 
-    <!-- CAJA IZQUIERDA (FLOAT) -->
-    <div id="cajaIzq" class="caja izquierda">
-      <h2>Datos personales</h2>
-      <p>Nombre: Luis García</p>
-      <p>Email: luis@email.com</p>
+    <div id="imageRight">
+      <img src="images/dragonDer.jpeg" alt="dragón Derecha" />
+      <p>Capa con float: right</p>
+    </div>  
 
-      <a href="#"
-        onclick="document.getElementById('cajaIzq').style.visibility='hidden'">
-        Ocultar (visibility)
-      </a>
+    <div id="textCentral">
+      <p>Lorem fistrum está la cosa muy malar apetecan se calle ustée diodenoo me cago en tus muelas ese pedazo de. Mamaar ese hombree por la gloria de mi madre ahorarr no te digo trigo por no llamarte Rodrigor...</p>
     </div>
 
-    <!-- CAJA DERECHA (FLOAT) -->
-    <div id="cajaDer" class="caja derecha">
-      <h2>Formación</h2>
-      <p>CFGS DAM (en curso)</p>
-      <p>ESO finalizada</p>
+    <div id='textMain'> 
+       <div id='imageToHide'>
+         <img src="images/dragonIzq.jpeg" alt="dragón Izquierda" /> 
+         <div>
+           <a class='button' href='#' onclick="document.getElementById('imageToHide').style.display = 'none'" >Ocultar/display</a>
+         </div>         
+       </div>
 
-      <a href="#"
-        onclick="document.getElementById('cajaDer').style.display='none'">
-        Ocultar (display)
-      </a>
+       <div id='textOverflow'>
+         <h2>Overflow</h2>
+         <p>Está la cosa muy malar se calle ustée diodenoo benemeritaar no puedor va usté muy cargadoo no puedor. Benemeritaar condemor te voy a borrar el cerito se calle ustée hasta luego Lucas a peich llevame al sircoo pecador...</p>
+         <p>Texto Lorem ipsum obtenido de chiquitoipsum.com</p>
+       </div>
     </div>
+  </div>
 
-    <!-- CLEAR -->
-    <div class="clear"></div>
-
-    <!-- OVERFLOW -->
-    <div class="caja overflow">
-      <h2>Conocimientos</h2>
-      <p>
-        HTML, CSS, Java, Git, Bases de datos, Sistemas operativos,
-        redes básicas, ofimática, entornos de desarrollo,
-        programación estructurada, algoritmia básica,
-        buenas prácticas de código.
-      </p>
-    </div>
-
+  <div id="footer"> 
+    Texto Lorem ipsum obtenido de <a href='http://www.chiquitoipsum.com/'> http://www.chiquitoipsum.com/ </a>
   </div>
 
 </body>
 </html>
-
