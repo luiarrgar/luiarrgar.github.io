@@ -11,6 +11,17 @@
   font-size: 1.2em;
 }
 
+body {
+  /* Añadimos background-attachment: fixed para que el fondo no se desplace */
+  background: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; 
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
+}
+
 /* Punto 1: Hover de los enlaces */
 #menu li a:hover {
   background-color: orange;      /* 1 */
@@ -91,5 +102,6 @@
     margin-bottom: 10px;
   }
 }
+
 
 
