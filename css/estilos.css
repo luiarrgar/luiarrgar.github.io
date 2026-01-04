@@ -1,10 +1,52 @@
+* {
+  margin: 0px auto;
+}
+
+body {
+  /* Fondo ya integrado según el diseño del PDF [cite: 30] */
+  background: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; /* Recomendado para mantener el fondo estático */
+  font-family: 'Indie Flower', cursive;
+  /* Margen para que el menú fijo no tape el encabezado */
+  padding-top: 20px; 
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  border: dashed 5px #FF9900;
+  margin: 10px;
+}
+
+ul {
+  color: white;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+#header {
+  margin-top: 35px;
+  text-align: center;
+  background-color: #FF9900;
+  border-bottom: 5px solid #6599FF;
+  border-top: 5px solid #6599FF;
+  color: white;
+  padding-top: 10px;
+}
+
 #menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
+  /* Punto 1: Barra de menú fija en la parte superior  */
   position: fixed;     /* 1 */
   top: 0px;            /* 2 */
   width: 100%;         /* 3 */
+  z-index: 1000;       /* Asegura que esté sobre otros elementos */
 
   text-align: center;  
   background-color: #097054;
@@ -13,34 +55,25 @@
   font-size: 1.2em;
 }
 
-body {
-  /* Ruta de la imagen de fondo */
-  background-image: url('images/fondo.jpg'); 
-  
-  /* Ajustes para que cubra toda la pantalla y no se repita de forma extraña */
-  background-size: cover;          /* La imagen cubre todo el fondo */
-  background-attachment: fixed;    /* El fondo se queda quieto al hacer scroll (efecto habitual en estas prácticas) */
-  background-position: center;     /* Centra la imagen */
-  background-repeat: no-repeat;    /* Evita que la imagen se duplique en mosaico */
-  
-  /* Margen superior para que el menú fijo no tape el inicio del contenido */
-  padding-top: 60px;               /* Ajusta según el grosor de tu #menu */
-  margin: 0;
+#menu a {
+  color: white;
+  text-decoration: none;
 }
 
-#menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
-  background-color: orange;        /* 1 */
-  text-decoration: underline;      /* 2 */
-  text-decoration-color: blue;
+#menu li {
+  display: inline;
+  padding-left: 5px;  
 }
 
-#footer{
-  /*
-  Punto 6: Barra de pie de pagina siempre estara 
-  */
+#menu li a:hover {
+  /* Punto 1: Fondo naranja y subrayado azul al pasar el ratón  */
+  background-color: orange;      /* 1 */
+  text-decoration: underline;    /* 2 */
+  text-decoration-color: blue;   /* Detalle del color de subrayado */
+}
+
+#footer {
+  /* Punto 6: Barra de pie de página siempre fija abajo  */
   position: fixed;     /* 1 */
   bottom: 0px;         /* 2 */
   width: 100%;         /* 3 */
@@ -53,50 +86,39 @@ body {
 }
 
 #imageLeft {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
+  /* Punto 2: Capa a la izquierda [cite: 60] */
+  float: left;         /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
 #imageRight {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
- */
-  float: right;    /* 1 */
+  /* Punto 2: Capa a la derecha [cite: 60] */
+  float: right;        /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
 #textMain {
-/*
-  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
- */
-  clear: both;     /* 1 */
+  /* Punto 3: Romper la dinámica del float anterior [cite: 54] */
+  clear: both;         /* 1 */
 }
 
 #imageToHide {
- /*
-  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
+  /* Punto 3: Capa a la izquierda [cite: 63] */
+  float: left;         /* 1 */
   text-align: center;
   margin-bottom: 40px;
 }
 
 #cookieEU {
- /*
-  Punto 4: La capa esta posicionada casi al centro de la pantalla. 
-  Se diferencia del menu y del footer en que NO se queda fija al hacer scroll
- */
-  position: absolute;     /* 1 */
-  top: 150px;             /* 2 */
-  left: 25%;              /* 3 */
-  width: 50%;             /* 4 */
+  /* Punto 4: Capa posicionada pero NO fija al hacer scroll  */
+  position: absolute;  /* 1: Absolute permite que se mueva al hacer scroll */
+  top: 150px;          /* 2: Distancia superior */
+  left: 25%;           /* 3: Centrado horizontal (usando ancho 50%) */
+  width: 50%;          /* 4: Ancho de la capa */
 
-  border:2px solid red;
+  border: 2px solid red;
   background-color: white;
   margin-bottom: 5px;
   padding-bottom: 5px;
@@ -104,12 +126,10 @@ body {
 }
 
 #textOverflow {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical
- */
-  overflow-y: scroll;     /* 1 */
-  overflow-x: hidden;     /* 2 */
-
+  /* Punto 5: Scroll vertical únicamente [cite: 72, 73] */
+  overflow-y: scroll;  /* 1 */
+  overflow-x: hidden;  /* 2 */
+  
   height: 250px;
   text-align: justify;
   border: 5px solid black;
@@ -118,37 +138,28 @@ body {
   margin-right: 20px;
 }
 
-/* MEDIA QUERY */
-@media all and (max-width: 500px) {
+/* ... Resto de estilos (textCentral, button, etc.) se mantienen igual ... */
 
+@media all and (max-width: 500px) {
   #imageLeft {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
+    /* Punto 7.1: Las capas dejan de flotar  */
+    float: none;       /* 1 */
     text-align: center;
     padding-bottom: 5px;
   }
 
   #imageRight {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
+    /* Punto 7.1: Las capas dejan de flotar  */
+    float: none;       /* 1 */
     text-align: center;
     clear: both;
     padding-bottom: 5px;
   }
   
   #imageToHide {
-    /*
-    Punto 7.2: La capa se desplaza hacia arriba
-    */
-    float: none;    /* 1 */
+    /* Punto 7.2: La capa se desplaza hacia arriba [cite: 78] */
+    float: none;       /* 1 */
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px; /* Reducido para desplazar contenido hacia arriba */
   }
 }
-
-
-
