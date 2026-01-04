@@ -1,138 +1,74 @@
-#menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
-  position: fixed;     /* 1 */
-  top: 0px;            /* 2 */
-  width: 100%;         /* 3 */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica UD 5.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tu_archivo.css">
+</head>
+<body>
 
-  text-align: center;  
-  background-color: #097054;
-  border: 1px solid #FF9900;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.2em;
-}
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Inicio</a> [cite: 35]</li>
+            <li><a href="#">Donde estamos</a> [cite: 35]</li>
+            <li><a href="#">Nuestros trabajos</a> [cite: 35]</li>
+            <li><a href="#">Contáctanos</a> [cite: 35]</li>
+        </ul>
+    </nav>
 
-#menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
-  background-color: orange;        /* 1 */
-  text-decoration: underline;      /* 2 */
-  text-decoration-color: blue;
-}
+    <header id="header">
+        <h1>Práctica semana 3 [cite: 35]</h1>
+    </header>
 
-#footer{
-  /*
-  Punto 6: Barra de pie de pagina siempre estara 
-  */
-  position: fixed;     /* 1 */
-  bottom: 0px;         /* 2 */
-  width: 100%;         /* 3 */
-  
-  background-color: #097054;
-  text-align: center;
-  color: white;
-  border-top: 5px solid black;
-  clear: both;
-}
+    <main id="content">
+        
+        <section id="section1">
+            <div id="imageLeft">
+                <img src="images/dragon.png" alt="Dragón Izquierda" width="200">
+                <br>
+                <a class="button" href="#" onclick="document.getElementById('imageLeft').style.visibility = 'hidden'">Ocultar / visibility</a> [cite: 62]
+            </div>
 
-#imageLeft {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
-  text-align: center;
-  padding-bottom: 5px;
-}
+            <div id="imageRight">
+                <img src="images/dragon.png" alt="Dragón Derecha" width="200">
+                <br>
+                <p>Capa con float: right [cite: 60]</p>
+            </div>
 
-#imageRight {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
- */
-  float: right;    /* 1 */
-  text-align: center;
-  padding-bottom: 5px;
-}
+            <div id="textCentral">
+                <p>Lorem fistrum está la casa muy malar apetecan se cate ustée diodenoa... [cite: 36, 38]</p>
+            </div>
+        </section>
 
-#textMain {
-/*
-  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
- */
-  clear: both;     /* 1 */
-}
+        <section id="textMain">
+            <div id="imageToHide">
+                <img src="images/dragon.png" alt="Dragón Ocultar" width="200">
+                <br>
+                <a class="button" href="#" onclick="document.getElementById('imageToHide').style.display = 'none'">Ocultar / display</a> [cite: 67]
+            </div>
 
-#imageToHide {
- /*
-  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
-  text-align: center;
-  margin-bottom: 40px;
-}
+            <div id="textOverflow">
+                <h2>Overflow [cite: 45]</h2>
+                <p>Está la cosa muy malar se cake ustée diodenoa benemeritaar no puedor va uste muy cargadoo no puedor. Benemeritaar condemor te voy a borrar el cerito... [cite: 46, 47]</p>
+                <p>Pecador ese pedazo de está la casa muy malar hasta luego lucas... [cite: 98, 99]</p>
+                <p>Texto extraído de chiquitoipsum.com [cite: 53]</p>
+            </div>
+        </section>
 
-#cookieEU {
- /*
-  Punto 4: La capa esta posicionada casi al centro de la pantalla. 
-  Se diferencia del menu y del footer en que NO se queda fija al hacer scroll
- */
-  position: absolute;     /* 1 */
-  top: 150px;             /* 2 */
-  left: 25%;              /* 3 */
-  width: 50%;             /* 4 */
+        <div id="cookieEU">
+            <div id="textCookie">
+                <h3>Esta webs necesita usar cookies. [cite: 39]</h3>
+                <p>Utilizamos cookies para asegurar que le ofrecemos la mejor experiencia en nuestro sitio web. [cite: 40]</p>
+                <button class="button" onclick="document.getElementById('cookieEU').style.display = 'none'">Cerrar</button> [cite: 89]
+            </div>
+        </div>
 
-  border:2px solid red;
-  background-color: white;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  box-shadow: 2px 2px 50px black;
-}
+    </main>
 
-#textOverflow {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical
- */
-  overflow-y: scroll;     /* 1 */
-  overflow-x: hidden;     /* 2 */
+    <footer id="footer">
+        <p>Texto Lorem ipsum obtenido de http://www.chiquitoipsum.com/ [cite: 53, 107]</p>
+    </footer>
 
-  height: 250px;
-  text-align: justify;
-  border: 5px solid black;
-  background-color: white;
-  padding: 20px;
-  margin-right: 20px;
-}
-
-/* MEDIA QUERY */
-@media all and (max-width: 500px) {
-
-  #imageLeft {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    padding-bottom: 5px;
-  }
-
-  #imageRight {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    clear: both;
-    padding-bottom: 5px;
-  }
-  
-  #imageToHide {
-    /*
-    Punto 7.2: La capa se desplaza hacia arriba
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    margin-bottom: 40px;
-  }
-}
-
-
+</body>
+</html>
