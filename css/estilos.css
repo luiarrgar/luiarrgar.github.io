@@ -1,89 +1,136 @@
+#menu {
+  /*
+  Punto 1: Barra de menu siempre estara 
+  */
+  position: fixed;     /* 1 */
+  top: 0px;            /* 2 */
+  width: 100%;         /* 3 */
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
+  text-align: center;  
+  background-color: #097054;
+  border: 1px solid #FF9900;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
 }
 
-/* GENERAL */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+#menu li a:hover{
+  /*
+  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
+  */
+  background-color: orange;        /* 1 */
+  text-decoration: underline;      /* 2 */
+  text-decoration-color: blue;
 }
 
-/* MENÚ FIJO */
-.menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #003366;
-  padding: 10px;
+#footer{
+  /*
+  Punto 6: Barra de pie de pagina siempre estara 
+  */
+  position: fixed;     /* 1 */
+  bottom: 0px;         /* 2 */
+  width: 100%;         /* 3 */
+  
+  background-color: #097054;
   text-align: center;
-}
-
-.menu a {
   color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  text-decoration: underline;
-  background-color: orange;
-}
-
-/* CONTENEDOR */
-.container {
-  width: 90%;
-  margin: 80px auto;
-}
-
-/* CAJAS */
-.caja {
-  background-color: white;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-}
-
-/* PERFIL */
-.perfil {
-  background-color: #e6e6e6;
-}
-
-/* FLOAT */
-.izquierda {
-  float: left;
-  width: 45%;
-}
-
-.derecha {
-  float: right;
-  width: 45%;
-}
-
-/* CLEAR */
-.clear {
+  border-top: 5px solid black;
   clear: both;
 }
 
-/* OVERFLOW */
-.overflow {
-  height: 80px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+#imageLeft {
+ /*
+  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
+ */
+  float: left;     /* 1 */
+  text-align: center;
+  padding-bottom: 5px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
+#imageRight {
+ /*
+  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
+ */
+  float: right;    /* 1 */
+  text-align: center;
+  padding-bottom: 5px;
+}
 
-  .izquierda,
-  .derecha {
-    float: none;
-    width: 100%;
+#textMain {
+/*
+  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
+ */
+  clear: both;     /* 1 */
+}
+
+#imageToHide {
+ /*
+  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
+ */
+  float: left;     /* 1 */
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#cookieEU {
+ /*
+  Punto 4: La capa esta posicionada casi al centro de la pantalla. 
+  Se diferencia del menu y del footer en que NO se queda fija al hacer scroll
+ */
+  position: absolute;     /* 1 */
+  top: 150px;             /* 2 */
+  left: 25%;              /* 3 */
+  width: 50%;             /* 4 */
+
+  border:2px solid red;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  box-shadow: 2px 2px 50px black;
+}
+
+#textOverflow {
+ /*
+  Punto 5: La capa tiene una barra de scroll vertical
+ */
+  overflow-y: scroll;     /* 1 */
+  overflow-x: hidden;     /* 2 */
+
+  height: 250px;
+  text-align: justify;
+  border: 5px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+/* MEDIA QUERY */
+@media all and (max-width: 500px) {
+
+  #imageLeft {
+    /*
+    Punto 7.1: Las capas dejan de flotar
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    padding-bottom: 5px;
   }
 
-  .container {
-    margin-top: 100px;
+  #imageRight {
+    /*
+    Punto 7.1: Las capas dejan de flotar
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    clear: both;
+    padding-bottom: 5px;
+  }
+  
+  #imageToHide {
+    /*
+    Punto 7.2: La capa se desplaza hacia arriba
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    margin-bottom: 40px;
   }
 }
