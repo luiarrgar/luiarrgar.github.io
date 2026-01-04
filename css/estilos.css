@@ -24,19 +24,12 @@
   position: fixed;     /* 1 */
   bottom: 0px;         /* 2 */
   width: 100%;         /* 3 */
-  background-color: #097054;
+  background: url('images/fondo.jpg');
   text-align: center;
   color: white;
   border-top: 5px solid black;
   clear: both;
 
-  background: url('images/fondo.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; 
-  font-family: 'Indie Flower', cursive;
-  margin: 0;
 }
 
 /* Punto 2: Capas de imágenes laterales */
@@ -100,6 +93,7 @@
     margin-bottom: 10px;
   }
 }
+
 
 
 
