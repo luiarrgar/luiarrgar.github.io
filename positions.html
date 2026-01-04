@@ -1,127 +1,137 @@
-/* --- CONFIGURACIÓN GLOBAL Y FONDO --- */
-body {
-  /* Punto 7: La imagen de fondo suele ocupar toda la pantalla */
-  background-image: url('fondo_web.jpg'); /* Sustituir por la ruta de tu imagen */
-  background-size: cover;
-  background-attachment: fixed; /* El fondo permanece fijo al hacer scroll */
-  background-position: center;
-  margin: 0;
-  /* Margen superior para que el #menu fijo no tape el inicio del contenido */
-  padding-top: 50px; 
-  /* Margen inferior para que el #footer fijo no tape el final del contenido */
-  padding-bottom: 50px;
-  font-family: Arial, sans-serif;
+como cambiarias este archivo css para conseguir lo que se pide en el pdf. "#menu {
+  /*
+  Punto 1: Barra de menu siempre estara 
+  */
+  position: fixed;     /* 1 */
+  top: 0px;            /* 2 */
+  width: 100%;         /* 3 */
+
+  text-align: center;  
+  background-color: #097054;
+  background-image: url('images/fondo.jpg')
+  border: 1px solid #FF9900;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
 }
 
-/* --- 1. BARRA DE MENÚ (SUPERIOR) --- */
-#menu {
-  position: fixed;     /* Queda fija al hacer scroll  */
-  top: 0px;            /* Colocada a 0px del top [cite: 55] */
-  left: 0;
-  width: 100%;         
-  z-index: 1000;       /* Siempre por encima del resto de elementos */
-  
-  text-align: center;
-  background-color: #097054;
-  border: 1px solid #FF9900;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.2em;
+#menu li a:hover{
+  /*
+  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
+  */
+  background-color: orange;        /* 1 */
+  text-decoration: underline;      /* 2 */
+  text-decoration-color: blue;
 }
 
-#menu li {
-  display: inline-block;
-  padding: 10px 20px;
+#footer{
+  /*
+  Punto 6: Barra de pie de pagina siempre estara 
+  */
+  position: fixed;     /* 1 */
+  bottom: 0px;         /* 2 */
+  width: 100%;         /* 3 */
+  
+  background-color: #097054;
+  text-align: center;
+  color: white;
+  border-top: 5px solid black;
+  clear: both;
 }
 
-#menu li a:hover {
-  /* Al pasar sobre las opciones se subraya en azul y el fondo cambia a naranja [cite: 57] */
-  background-color: orange;
-  text-decoration: underline;
-  text-decoration-color: blue;
-}
-
-/* --- 2. CAPAS CON FLOAT (VISIBILITY) --- */
 #imageLeft {
-  float: left;         /* Capa con float a la izquierda [cite: 60] */
-  text-align: center;
-  padding: 10px;
-  /* El JS usa visibility: hidden, dejando el hueco [cite: 58, 59] */
+ /*
+  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
+ */
+  float: left;     /* 1 */
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 #imageRight {
-  float: right;        /* Capa con float a la derecha [cite: 60] */
-  text-align: center;
-  padding: 10px;
+ /*
+  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
+ */
+  float: right;    /* 1 */
+  text-align: center;
+  padding-bottom: 5px;
 }
 
-/* --- 3. SECCIÓN INFERIOR (DISPLAY) --- */
 #textMain {
-  /* Rompe el float anterior para empezar una sección nueva [cite: 54] */
-  clear: both;
+/*
+  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
+ */
+  clear: both;     /* 1 */
 }
 
 #imageToHide {
-  float: left;         /* Capa con float a la izquierda [cite: 63] */
-  text-align: center;
-  margin-bottom: 40px;
-  /* El JS usa display: none, NO deja hueco y la derecha se expande [cite: 63, 64] */
+ /*
+  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
+ */
+  float: left;     /* 1 */
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* --- 4. CAPA DE COOKIES (ABSOLUTE) --- */
 #cookieEU {
-  /* Se diferencia del menú en que al hacer scroll la capa se desplaza  */
-  position: absolute;  
-  top: 150px;
-  left: 25%;
-  width: 50%;
+ /*
+  Punto 4: La capa esta posicionada casi al centro de la pantalla. 
+  Se diferencia del menu y del footer en que NO se queda fija al hacer scroll
+ */
+  position: absolute;     /* 1 */
+  top: 150px;             /* 2 */
+  left: 25%;              /* 3 */
+  width: 50%;             /* 4 */
 
-  border: 2px solid red;
-  background-color: white; /* Fondo blanco para legibilidad sobre la imagen */
-  padding: 15px;
-  box-shadow: 2px 2px 50px black;
-  z-index: 500;
+  border:2px solid red;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  box-shadow: 2px 2px 50px black;
 }
 
-/* --- 5. OVERFLOW --- */
 #textOverflow {
-  /* Presenta una barra para desplazarse por el texto [cite: 72] */
-  overflow-y: scroll;  /* Barra vertical [cite: 73] */
-  overflow-x: hidden;  /* Sin barra horizontal [cite: 73] */
+ /*
+  Punto 5: La capa tiene una barra de scroll vertical
+ */
+  overflow-y: scroll;     /* 1 */
+  overflow-x: hidden;     /* 2 */
 
-  height: 250px;
-  text-align: justify;
-  border: 5px solid black;
-  background-color: white;
-  padding: 20px;
-  margin: 20px;
+  height: 250px;
+  text-align: justify;
+  border: 5px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;
 }
 
-/* --- 6. PIE DE PÁGINA (INFERIOR) --- */
-#footer {
-  /* Igual que el punto 1 pero en la parte inferior [cite: 74] */
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  width: 100%;
-  
-  background-color: #097054;
-  text-align: center;
-  color: white;
-  border-top: 5px solid black;
-  padding: 5px 0;
-}
-
-/* --- 7. ADAPTACIÓN @MEDIA (PANTALLAS ESTRECHAS) --- */
+/* MEDIA QUERY */
 @media all and (max-width: 500px) {
-  /* 7.1: Las capas dejan de flotar para que quepan en pantalla [cite: 77] */
-  #imageLeft, #imageRight {
-    float: none;
-    width: 100%;
-  }
 
-  /* 7.2: La capa se desplaza para ver completa la capa overflow [cite: 78] */
-  #imageToHide {
-    float: none;
-    margin-bottom: 10px;
-  }
-}
+  #imageLeft {
+    /*
+    Punto 7.1: Las capas dejan de flotar
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  #imageRight {
+    /*
+    Punto 7.1: Las capas dejan de flotar
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    clear: both;
+    padding-bottom: 5px;
+  }
+  
+  #imageToHide {
+    /*
+    Punto 7.2: La capa se desplaza hacia arriba
+    */
+    float: none;    /* 1 */
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}"
