@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Práctica UD 5.1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/tu_archivo.css">
+  <meta charset="UTF-8">
+  <title>Currículum - UD 05.1</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-    <nav id="menu">
-        <ul>
-            <li><a href="#">Inicio</a> [cite: 35]</li>
-            <li><a href="#">Donde estamos</a> [cite: 35]</li>
-            <li><a href="#">Nuestros trabajos</a> [cite: 35]</li>
-            <li><a href="#">Contáctanos</a> [cite: 35]</li>
-        </ul>
-    </nav>
+  <!-- MENÚ FIJO -->
+  <div class="menu">
+    <a href="#">Perfil</a>
+    <a href="#">Formación</a>
+    <a href="#">Conocimientos</a>
+  </div>
 
-    <header id="header">
-        <h1>Práctica semana 3 [cite: 35]</h1>
-    </header>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container">
 
-    <main id="content">
-        
-        <section id="section1">
-            <div id="imageLeft">
-                <img src="images/dragon.png" alt="Dragón Izquierda" width="200">
-                <br>
-                <a class="button" href="#" onclick="document.getElementById('imageLeft').style.visibility = 'hidden'">Ocultar / visibility</a> [cite: 62]
-            </div>
+    <!-- PERFIL -->
+    <div class="caja perfil">
+      <h2>Perfil personal</h2>
+      <p>
+        Estudiante de primer curso de Desarrollo de Aplicaciones,
+        con interés en la programación y el diseño web.
+      </p>
+    </div>
 
-            <div id="imageRight">
-                <img src="images/dragon.png" alt="Dragón Derecha" width="200">
-                <br>
-                <p>Capa con float: right [cite: 60]</p>
-            </div>
+    <!-- CAJA IZQUIERDA (FLOAT) -->
+    <div id="cajaIzq" class="caja izquierda">
+      <h2>Datos personales</h2>
+      <p>Nombre: Luis García</p>
+      <p>Email: luis@email.com</p>
 
-            <div id="textCentral">
-                <p>Lorem fistrum está la casa muy malar apetecan se cate ustée diodenoa... [cite: 36, 38]</p>
-            </div>
-        </section>
+      <a href="#"
+        onclick="document.getElementById('cajaIzq').style.visibility='hidden'">
+        Ocultar (visibility)
+      </a>
+    </div>
 
-        <section id="textMain">
-            <div id="imageToHide">
-                <img src="images/dragon.png" alt="Dragón Ocultar" width="200">
-                <br>
-                <a class="button" href="#" onclick="document.getElementById('imageToHide').style.display = 'none'">Ocultar / display</a> [cite: 67]
-            </div>
+    <!-- CAJA DERECHA (FLOAT) -->
+    <div id="cajaDer" class="caja derecha">
+      <h2>Formación</h2>
+      <p>CFGS DAM (en curso)</p>
+      <p>ESO finalizada</p>
 
-            <div id="textOverflow">
-                <h2>Overflow [cite: 45]</h2>
-                <p>Está la cosa muy malar se cake ustée diodenoa benemeritaar no puedor va uste muy cargadoo no puedor. Benemeritaar condemor te voy a borrar el cerito... [cite: 46, 47]</p>
-                <p>Pecador ese pedazo de está la casa muy malar hasta luego lucas... [cite: 98, 99]</p>
-                <p>Texto extraído de chiquitoipsum.com [cite: 53]</p>
-            </div>
-        </section>
+      <a href="#"
+        onclick="document.getElementById('cajaDer').style.display='none'">
+        Ocultar (display)
+      </a>
+    </div>
 
-        <div id="cookieEU">
-            <div id="textCookie">
-                <h3>Esta webs necesita usar cookies. [cite: 39]</h3>
-                <p>Utilizamos cookies para asegurar que le ofrecemos la mejor experiencia en nuestro sitio web. [cite: 40]</p>
-                <button class="button" onclick="document.getElementById('cookieEU').style.display = 'none'">Cerrar</button> [cite: 89]
-            </div>
-        </div>
+    <!-- CLEAR -->
+    <div class="clear"></div>
 
-    </main>
+    <!-- OVERFLOW -->
+    <div class="caja overflow">
+      <h2>Conocimientos</h2>
+      <p>
+        HTML, CSS, Java, Git, Bases de datos, Sistemas operativos,
+        redes básicas, ofimática, entornos de desarrollo,
+        programación estructurada, algoritmia básica,
+        buenas prácticas de código.
+      </p>
+    </div>
 
-    <footer id="footer">
-        <p>Texto Lorem ipsum obtenido de http://www.chiquitoipsum.com/ [cite: 53, 107]</p>
-    </footer>
+  </div>
 
 </body>
 </html>
