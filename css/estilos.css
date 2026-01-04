@@ -11,16 +11,6 @@
   font-size: 1.2em;
 }
 
-body {
-  /* Añadimos background-attachment: fixed para que el fondo no se desplace */
-  background: url('../images/fondo.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; 
-  font-family: 'Indie Flower', cursive;
-  margin: 0;
-}
 
 /* Punto 1: Hover de los enlaces */
 #menu li a:hover {
@@ -39,6 +29,14 @@ body {
   color: white;
   border-top: 5px solid black;
   clear: both;
+
+  background: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; 
+  font-family: 'Indie Flower', cursive;
+  margin: 0;
 }
 
 /* Punto 2: Capas de imágenes laterales */
@@ -102,6 +100,7 @@ body {
     margin-bottom: 10px;
   }
 }
+
 
 
 
