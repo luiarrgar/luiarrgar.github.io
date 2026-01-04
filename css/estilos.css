@@ -13,6 +13,21 @@
   font-size: 1.2em;
 }
 
+body {
+  /* Ruta de la imagen de fondo */
+  background-image: url('nombre_de_tu_imagen.jpg'); 
+  
+  /* Ajustes para que cubra toda la pantalla y no se repita de forma extraña */
+  background-size: cover;          /* La imagen cubre todo el fondo */
+  background-attachment: fixed;    /* El fondo se queda quieto al hacer scroll (efecto habitual en estas prácticas) */
+  background-position: center;     /* Centra la imagen */
+  background-repeat: no-repeat;    /* Evita que la imagen se duplique en mosaico */
+  
+  /* Margen superior para que el menú fijo no tape el inicio del contenido */
+  padding-top: 60px;               /* Ajusta según el grosor de tu #menu */
+  margin: 0;
+}
+
 #menu li a:hover{
   /*
   Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
@@ -134,3 +149,4 @@
     margin-bottom: 40px;
   }
 }
+
