@@ -1,11 +1,42 @@
+* {
+  margin: 0px auto;
+}
+
+body {
+  background: url('../images/fondo.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+  font-family: 'Indie Flower', cursive;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  border: dashed 5px #FF9900;
+  margin: 10px;
+  max-width: 200px;
+}
+
+#header {
+  margin-top: 60px; /* Ajustado para que el menú no lo tape */
+  text-align: center;
+  background-color: #FF9900;
+  border-bottom: 5px solid #6599FF;
+  border-top: 5px solid #6599FF;
+  color: white;
+  padding-top: 10px;
+}
+
+/* Punto 1: Menú Fijo */
 #menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
   position: fixed;     /* 1 */
   top: 0px;            /* 2 */
   width: 100%;         /* 3 */
-
+  z-index: 1000;
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
@@ -13,23 +44,28 @@
   font-size: 1.2em;
 }
 
-#menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
-  background-color: orange;        /* 1 */
-  text-decoration: underline;      /* 2 */
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu li {
+  display: inline-block;
+  padding: 10px;  
+}
+
+#menu li a:hover {
+  /* Punto 1: Efectos Hover */
+  background-color: orange;      /* 1 */
+  text-decoration: underline;    /* 2 */
   text-decoration-color: blue;
 }
 
-#footer{
-  /*
-  Punto 6: Barra de pie de pagina siempre estara 
-  */
+/* Punto 6: Pie de página Fijo */
+#footer {
   position: fixed;     /* 1 */
   bottom: 0px;         /* 2 */
   width: 100%;         /* 3 */
-  
   background-color: #097054;
   text-align: center;
   color: white;
@@ -37,64 +73,47 @@
   clear: both;
 }
 
+/* Punto 2: Floats e Imágenes */
 #imageLeft {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
+  float: left;         /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
 #imageRight {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
- */
-  float: right;    /* 1 */
+  float: right;        /* 1 */
   text-align: center;
   padding-bottom: 5px;
 }
 
+/* Punto 3: Clear y ocultar */
 #textMain {
-/*
-  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
- */
-  clear: both;     /* 1 */
+  clear: both;         /* 1: Rompe la dinámica del float anterior */
 }
 
 #imageToHide {
- /*
-  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-  float: left;     /* 1 */
+  float: left;         /* 1 */
   text-align: center;
   margin-bottom: 40px;
 }
 
+/* Punto 4: Capa Cookies (Absolute) */
 #cookieEU {
- /*
-  Punto 4: La capa esta posicionada casi al centro de la pantalla. 
-  Se diferencia del menu y del footer en que NO se queda fija al hacer scroll
- */
-  position: absolute;     /* 1 */
-  top: 150px;             /* 2 */
-  left: 25%;              /* 3 */
-  width: 50%;             /* 4 */
-
-  border:2px solid red;
+  position: absolute;  /* 1: No se queda fija al hacer scroll */
+  top: 150px;          /* 2 */
+  left: 25%;           /* 3 */
+  width: 50%;          /* 4 */
+  border: 2px solid red;
   background-color: white;
-  margin-bottom: 5px;
   padding-bottom: 5px;
   box-shadow: 2px 2px 50px black;
+  z-index: 500;
 }
 
+/* Punto 5: Overflow Scroll */
 #textOverflow {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical
- */
-  overflow-y: scroll;     /* 1 */
-  overflow-x: hidden;     /* 2 */
-
+  overflow-y: scroll;  /* 1: Barra vertical */
+  overflow-x: hidden;  /* 2: Ocultar horizontal */
   height: 250px;
   text-align: justify;
   border: 5px solid black;
@@ -103,34 +122,35 @@
   margin-right: 20px;
 }
 
-/* MEDIA QUERY */
+#textCentral {
+  padding: 15px;
+  border: 5px dashed black;
+  background-color: white;
+  margin: 10px 250px;
+  border-radius: 30px;
+}
+
+.button {
+  background-color: #097054;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Punto 7: Media Queries */
 @media all and (max-width: 500px) {
-
-  #imageLeft {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    padding-bottom: 5px;
+  #imageLeft, #imageRight {
+    float: none;       /* 1: Dejan de flotar */
+    width: 100%;
   }
-
-  #imageRight {
-    /*
-    Punto 7.1: Las capas dejan de flotar
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    clear: both;
-    padding-bottom: 5px;
+  
+  #textCentral {
+    margin: 10px;
   }
   
   #imageToHide {
-    /*
-    Punto 7.2: La capa se desplaza hacia arriba
-    */
-    float: none;    /* 1 */
-    text-align: center;
-    margin-bottom: 40px;
+    float: none;       /* 1: Se desplaza hacia arriba */
+    margin-bottom: 10px;
   }
 }
