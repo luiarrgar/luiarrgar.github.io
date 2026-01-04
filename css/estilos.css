@@ -1,39 +1,89 @@
 
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERAL */
 body {
-    font-family: Asimovian, sans-serif; /* https://fonts.google.com/specimen/Asimovian */
-    background-color: #BCDCEB;
-    color: #333;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
-
-h1 {
-    color: #02D1F1;
-    margin-top: 20px;
+/* MENÚ FIJO */
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #003366;
+  padding: 10px;
+  text-align: center;
 }
 
-
-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    display: block;
-    margin: 20px auto;
+.menu a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-
-ul {
-    list-style-type: square;
-    padding-left: 0;
+.menu a:hover {
+  text-decoration: underline;
+  background-color: orange;
 }
 
-
-li {
-    margin: 5px 0;
+/* CONTENEDOR */
+.container {
+  width: 90%;
+  margin: 80px auto;
 }
 
+/* CAJAS */
+.caja {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
 
+/* PERFIL */
+.perfil {
+  background-color: #e6e6e6;
+}
 
+/* FLOAT */
+.izquierda {
+  float: left;
+  width: 45%;
+}
 
+.derecha {
+  float: right;
+  width: 45%;
+}
+
+/* CLEAR */
+.clear {
+  clear: both;
+}
+
+/* OVERFLOW */
+.overflow {
+  height: 80px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  .izquierda,
+  .derecha {
+    float: none;
+    width: 100%;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
+}
